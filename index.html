@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Get Fastly Fiddle Config</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+  </head>  
+  <body onload="getId()">
+    <div id="input" style="display:none">
+      <label for="fid">Enter Fastly Fiddle ID:</label>
+      <input id="fid" type="text" onkeyup="checkId(this)">
+      <button id="submit" disabled="disabled" onclick="location.href+='?'+document.getElementById('fid').value">Submit</button>
+      <p id="message"></p>
+    </div>
+    <div id="output" style="display:none"></div>
+  </body>
+</html>

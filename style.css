@@ -1,0 +1,58 @@
+/* CSS files add styling rules to your content */
+
+:root {
+    --fastly_dark_red: #e82c2a;
+    --fastly_light_red: #fd8a8d;
+    --fastly_dark_blue: #62C0E8;
+    --fastly_light_blue: #CEE9F8;
+    --fastly_button_blue: #147fbd;
+    --fastly_button_gray: #7c7c7c;
+    --link_blue: #3C7EB8;
+    --body_padding: 1em;
+    --body_width: 70em;
+}
+
+@media print{
+   .noprint{
+       display:none;
+   }
+}
+
+body {
+  font-family: arial;
+  margin: 0;
+}
+#input {
+  font-weight: bold;
+  padding: var(--body_padding) !important;
+}
+
+#message { color:var(--fastly_dark_red); }
+
+h1 {
+    background-color: var(--fastly_dark_red);
+    color: var(--fastly_light_red);
+    padding: 0.5em;
+    margin: 0;
+}
+
+h1 a:visited  {
+    color: var(--fastly_light_red);
+}
+
+h1 button {
+  float: right;
+  font-size: 88%;
+  border-radius: 6px;
+  color: var(--fastly_dark_red);
+  background: var(--fastly_light_red);
+  border: none;
+}
+
+h2 {
+    color: var(--fastly_dark_red);
+}
+
+section {
+    padding: 0 var(--body_padding);
+}
