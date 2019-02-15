@@ -43,7 +43,7 @@ function getFiddleConfig(id) {
               myCreateElement("h2",eSection,"Origin Servers");
               eTmp = myCreateElement("ol",eSection);
               eTmp.setAttribute("start","0");
-              for (var i=0; i<oCfg.origins.length; i++) { myCreateElement("li",eTmp,(oCfg.origins[i]==null)?"<i>Not Specified</i>":oCfg.origins[i]); }
+              for (var i=0; i<oCfg.origins.length; i++) { myCreateElement("li",eTmp,(oCfg.origins[i]==null)?"&nbsp;":oCfg.origins[i]); }
               // Custom VCL Subroutines
               myCreateElement("h2",eSection,"Custom VCL");
               for ( let a="init,recv,hit,miss,pass,fetch,deliver,error".split(","),j=0; j<a.length; j++) {
@@ -94,7 +94,8 @@ function getFiddleConfig(id) {
               //
               eOutput.style.display = "";
           } if (xhr.status === 404) {
-            alert(xhr.responseText);
+            document.getElementById("input").style.display = "";
+            document.getElementById("message").innerText = xhr.responseText;
           } else {
               console.log("ERROR - HTTP Status: " + xhr.status);
           }
