@@ -166,7 +166,7 @@ function parseVclBoilerplate(html) {
   txtAfter = txtBefore;
   
   txtBefore  = "# VCL Boilerplate Source: " + BOILERPLATE_URL + "\n";
-  txtBefore += "#   Fastly Fiddle Source: " + FIDDLE_URL + document.getElementById("fid").value + "\n";
+  txtBefore += "#   Fastly Fiddle Source: " + FIDDLE_URL + oCfg.fiddle.id + "\n";
   var o = [];
   for (var i=0; i<oCfg.fiddle.origins.length; i++) { if (oCfg.fiddle.origins[i]!=null) o.push("#   F_origin_" + i + " = " + oCfg.fiddle.origins[i]); }
   if (o.length!=0) txtBefore += "#\n# Remember to name your origin" + ((o.length==1)?"":"s") + " as follows:\n#\n" + o.join("\n") + "\n\n";
