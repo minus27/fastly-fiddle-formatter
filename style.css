@@ -56,3 +56,8 @@ h2 {
 section {
     padding: 0 var(--body_padding);
 }
+
+hr {
+  border: 3px solid var(--fastly_light_red);
+  border-radius: 1px;
+}
